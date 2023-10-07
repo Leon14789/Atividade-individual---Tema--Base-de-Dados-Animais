@@ -1,0 +1,61 @@
+CREATE TABLE Filme ( 
+  id int PRIMARY KEY,
+  nome VARCHAR(50),
+  sinopse VARCHAR(50),
+  estudio VARCHAR(50)
+
+);
+
+CREATE TABLE categoria ( 
+  id int PRIMARY KEY,
+  nome VARCHAR(50),
+  publico_alvo VARCHAR(200),
+  id_filmes int,
+  FOREIGN KEY (id_filmes) REFERENCES Filme(id)
+);
+
+-- Filme 1
+INSERT INTO Filme (id, nome, sinopse, estudio)
+VALUES (1, 'Filme A', 'Uma história emocionante', 'Estúdio X');
+
+-- Filme 2
+INSERT INTO Filme (id, nome, sinopse, estudio)
+VALUES (2, 'Filme B', 'Uma aventura emocionante', 'Estúdio Y');
+
+-- Filme 3
+INSERT INTO Filme (id, nome, sinopse, estudio)
+VALUES (3, 'Filme C', 'Uma comédia hilariante', 'Estúdio Z');
+
+-- Filme 4
+INSERT INTO Filme (id, nome, sinopse, estudio)
+VALUES (4, 'Filme D', 'Uma história de amor', 'Estúdio X');
+
+-- Filme 5
+INSERT INTO Filme (id, nome, sinopse, estudio)
+VALUES (5, 'Filme E', 'Uma ação intensa', 'Estúdio Y');
+
+-- Filme 6
+INSERT INTO Filme (id, nome, sinopse, estudio)
+VALUES (6, 'Filme F', 'Uma ficção científica intrigante', 'Estúdio Z');
+
+-- Filme 7
+INSERT INTO Filme (id, nome, sinopse, estudio)
+VALUES (7, 'Filme G', 'Um drama emocional', 'Estúdio X');
+
+-- Filme 8
+INSERT INTO Filme (id, nome, sinopse, estudio)
+VALUES (8, 'Filme H', 'Um suspense arrepiante', 'Estúdio Y');
+
+-- Categoria 1
+INSERT INTO categoria (id, nome, publico_alvo, id_filmes)
+VALUES (1, 'Ação', 'Maiores de 16 anos', 1);
+
+-- Categoria 2
+INSERT INTO categoria (id, nome, publico_alvo, id_filmes)
+VALUES (2, 'Comédia', 'Todas as idades', 3);
+
+-- Categoria 3
+INSERT INTO categoria (id, nome, publico_alvo, id_filmes)
+VALUES (3, 'Drama', 'Maiores de 18 anos', 7);
+
+

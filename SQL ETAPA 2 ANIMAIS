@@ -1,0 +1,34 @@
+CREATE TABLE Animais ( 
+  id_animal int PRIMARY KEY,
+  nome VARCHAR(50),
+  nasc date,
+  especie VARCHAR(50)
+  );
+  
+  CREATE TABLE DescricaoEspecies ( 
+ id int PRIMARY KEY,
+     id_descricao int,
+  Descricao VARCHAR(500),
+    FOREIGN KEY (id_descricao) REFERENCES Animais(id_animal)
+
+  );
+  
+  
+  
+  
+ INSERT INTO Animais values (01, 'Agata', '2015-04-09', 'Cachorro');
+   
+    INSERT INTO Animais values (02, 'Feliz', '2016-06-06', 'Gato');
+ 
+  INSERT INTO Animais values (03, 'Tom', '2013-08-02',  'Leopardo');
+  
+   INSERT INTO Animais values (04, 'Garfiled', '2015-07-06',  'Lontra');
+   
+    INSERT INTO Animais values (05, 'Frajola', '2013-08-01',  'Pato');
+    
+     INSERT INTO Animais values (06, 'Manda-Chuva', '2012-02-03',  'GOrila');
+     
+      INSERT INTO Animais values (07, 'Snowball', '2014-04-06',  'Preguica');
+      
+       INSERT INTO Animais values (08, 'Gato de Botas', '2012-12-10',  'Verme');
+  
